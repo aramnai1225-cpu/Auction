@@ -72,7 +72,7 @@ function filterItems(){
 }
 
 //Register page 
-function validateRegister() {
+function validateRegister(){
 
     var name =
     document.getElementById("name").value;
@@ -83,47 +83,89 @@ function validateRegister() {
     var phone =
     document.getElementById("phone").value;
 
+    var password =
+    document.getElementById("password").value;
+
     var type =
     document.getElementById("type").value;
 
-    // empty check
     if(name == "" ||
        email == "" ||
        phone == "" ||
+       password == "" ||
        type == ""){
 
         alert("Please fill all fields");
-
         return false;
     }
 
-    // create object
     var user = {
 
-        name: name,
-        email: email,
-        phone: phone,
-        type: type
+        name:name,
+        email:email,
+        phone:phone,
+        password:password,
+        type:type
     };
 
-    // old users
-    var users =
+    let users =
     JSON.parse(
-    localStorage.getItem("users"))
-    || [];
+    localStorage.getItem("users")
+    ) || [];
 
-    // add new user
     users.push(user);
 
-    // save to localstorage
     localStorage.setItem(
     "users",
     JSON.stringify(users)
     );
 
-    document.getElementById("message")
-    .innerHTML =
-    "Registration successful!";
+    alert("Registration successful!");
+
+    window.location.href =
+    "login.html";
+
+    return false;
+}
+
+//login 
+function loginUser(){
+
+    let email =
+    document.getElementById(
+    "loginEmail"
+    ).value;
+
+    let password =
+    document.getElementById(
+    "loginPassword"
+    ).value;
+
+    let users =
+    JSON.parse(
+    localStorage.getItem("users")
+    ) || [];
+
+    for(let i=0; i<users.length; i++){
+
+        if(users[i].email == email &&
+           users[i].password == password){
+
+            localStorage.setItem(
+            "loggedUser",
+            JSON.stringify(users[i])
+            );
+
+            alert("Login successful!");
+
+            window.location.href =
+            "dashboard.html";
+
+            return false;
+        }
+    }
+
+    alert("Invalid email or password");
 
     return false;
 }

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Dashboard</title>
+
+<link rel="stylesheet"
+href="css/style.css">
+
+</head>
+
+<body>
+
+<h1>User Dashboard</h1>
+
+<h2>Registered Auctions</h2>
+
+<div id="auctionList"></div>
+
+<script>
+
+let auctions =
+JSON.parse(
+localStorage.getItem(
+"registeredAuctions")
+) || [];
+
+let output = "";
+
+for(let i=0; i<auctions.length; i++){
+
+    output += `
+
+    <div class="card">
+
+    <h3>${auctions[i].item}</h3>
+
+    <p>Date:
+    ${auctions[i].date}</p>
+
+    <p>
+    Registration Number:
+    ${auctions[i].regNumber}
+    </p>
+
+    </div>
+    `;
+}
+
+document.getElementById(
+"auctionList"
+).innerHTML = output;
+
+</script>
+
+</body>
+</html>
