@@ -227,3 +227,23 @@ setInterval(function(){
     }
 
 },1000);
+
+//Mysql info 
+fetch("/api/products")
+.then(res => res.json())
+.then(data => {
+
+    let output = "";
+
+    data.forEach(product => {
+
+        output += `
+        <div class="card">
+            <h3>${product.name}</h3>
+            <p>€${product.price}</p>
+        </div>
+        `;
+    });
+
+    document.getElementById("products").innerHTML = output;
+});
