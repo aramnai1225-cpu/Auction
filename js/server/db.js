@@ -3,14 +3,14 @@ const mysql = require("mysql2");
 const db = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "YOUR_PASSWORD",
-    database: "auction_platform"
+    password: "Aagii_12251",
+    database: "Auction"
 });
 
 db.connect((err) => {
-    if(err){
-        console.log(err);
-    }else{
+    if (err) {
+        console.log("MySQL connection error:", err);
+    } else {
         console.log("MySQL Connected Successfully");
     }
 });
