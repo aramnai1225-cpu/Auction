@@ -1,0 +1,314 @@
+
+/*Body */
+body {
+  font-family: Arial;
+  margin: 0; /*browse defualt*/
+}
+/*INDEX nav*/
+.navbar {
+  background: #1e2a38;
+  padding: 15px; 
+  display: flex;  /* all element one line*/
+  justify-content: space-between; /*Logo left side, Menu right side*/
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  color: white; 
+  text-decoration: none; /*No underline*/
+}
+/*Index page intro*/
+.Intro {
+  background: black;
+  color: white;
+  text-align: center;  /*text center*/
+  padding: 60px; 
+}
+/*Index page card section*/
+.card-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+/*Index page card*/
+.card {
+  border: 1px solid #d86565;  /*border of card box*/
+  padding: 20px;
+  width: 30%;
+}
+/*Index page card img*/
+.card img {
+    width: 100%;      
+    height: 200px;
+    object-fit: cover; 
+}
+/*Index page Button*/
+.bnt  {
+  display: inline-block;
+  margin-top: 20px;
+  background: #00aaff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+/* Index page BUtton hover*/
+.btn:hover{
+  background: #0088cc;
+}
+/*Index page  BID BUTTON */
+.bid-btn {
+  background: #1e2a38;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+/*Index page bid button*/
+.bid-btn:hover {
+  background: #333;
+}
+
+/*Index page CARD HOVER */
+.card:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+/*Index page footer*/
+footer {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Contact page-Contact Form */
+.contact-form {
+    width: 25%;
+    margin: 50px auto;   /*Center*/
+    padding: 20px;
+    background-color:lightgray;
+    box-shadow: gray;
+    text-align: left;
+}
+
+/* Contact page- Label styling */
+.contact-form label {
+    display: block; /* Label takes up full width */
+    font-size: 18px;
+    margin-bottom: 8px; /* Adds space between label and input */
+}
+
+/* Input fields, textarea and button styling all will be same width */
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+    width: 100%; /* Make all fields take up the same full width */
+    padding: 10px;
+    margin-bottom: 15px; /* Space between each input field */
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 15px;  /*circular corner*/ 
+    box-sizing: border-box; /* Ensure padding doesn't affect the width */
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+}
+
+/* Button styling */
+.contact-form button {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #555;
+}
+/* Contact page Faq */
+.about, .faq {
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+/*Info page*/
+.info {
+  padding: 40px;
+  max-width: 1100px;
+  margin: auto;
+}
+/* Info page Search */
+#searchInput {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+/*Info page ABOUT SECTION */
+.about {
+  background: #f5f7fa;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+/* AUCTION CARDS */
+.auction-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+/*info page list*/
+.list {
+  width: 48%;
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.list:hover {
+  transform: scale(1.03);
+}
+
+.list img {
+  width: 90%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.list button {
+  background: #1e2a38;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.list button:hover {
+  background: #333;
+}
+
+/* Info page FAQ */
+.faq {
+  margin-top: 40px;
+  background: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* List page Back*/
+.back-btn {
+  color:white;   
+  text-decoration: none;
+  font-size: 18px;
+  background: #1e2a38;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: 0.35s;
+}
+/*hover of back bott*/
+.back-btn:hover {
+  background: #2c3e50;;
+}
+/*List.html*/
+.List-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px;
+}
+
+/* List page TITLE */
+.List-container h2, .List-container h3 {
+  text-align: center;
+}
+
+/*List page GRID */
+.cars {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/*List page  CARD */
+.zurag {
+  width: 30%;
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.zurag:hover {
+  transform: scale(1.05);
+}
+
+/* IMAGE */
+.zurag img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/*Register page */
+.register-section {
+  max-width: 500px;
+  margin: 50px auto;
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+/*Register page Box*/
+.auction-box {
+  background: #1e2a38;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+/*Register page Input*/
+#registerForm input,
+#registerForm select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+/*Register page btn*/
+#registerForm button {
+  width: 100%;
+  padding: 12px;
+  background: #1e2a38;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#registerForm button:hover {
+  background: #1e2a38;
+}
+/*Register page massege */
+#message {
+  margin-top: 15px;
+  font-weight: bold;
+}

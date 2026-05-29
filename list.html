@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="widht=device-width, initial-scale=1.0">
+
+    <title>Auction List</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script  src="js/script.js" defer></script>
+    </head>
+
+<body>
+    <nav class="navbar">
+    <div class="logo">  <a href="info.html" class="back-btn">← Back</a></div>
+
+        <ul class="nav-links">
+            <!-- Home page -->
+            <li><a href="index.html">Home</a></li>
+            <li><a href="info.html">Information</a></li>
+            <li><a href="register.html">Registration</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <div class="List-container">
+        <p2>16 April 2026</p2> 
+   <p3> Cars</p3>
+    
+    <div  class="Cars">
+        <div class="zurag">
+            <img src="image/cars.jpg" alt="Car 1">
+            <h3>Honda Fit</h3>
+    <p>📅 Year: 2019</p>
+    <p>🚢 Imported: 2023</p>
+    <p>🛣 Mileage: 60,000 km</p>
+    <p>💰 Price: €7500</p>
+    <a href="register.html"><button
+onclick="addToCart(
+'Honda Fit',
+7500)">
+Add To Cart
+</button></a>
+<h3>Current Bid:
+<span id="bidPrice">
+7500
+</span>€
+</h3>
+
+<button onclick="increaseBid()">
+Place Bid
+</button>
+
+<p>
+Time Left:
+<span id="timer">
+30
+</span>
+</p>
+    <p> car1</p>
+</div>
+            </div>
+        <div class="zurag">
+            <img src="image/cars1.jpg" alt="Car 2">
+              <h3>Hyundai Sonata</h3>
+    <p>📅 Year: 2016</p>
+    <p>🚢 Imported: 2020</p>
+    <p>🛣 Mileage: 140,000 km</p>
+    <p>💰 Price: €5500</p>
+    <a href="register.html"><button
+onclick="addToCart(
+'Honda Fit',
+7500)">
+Add To Cart
+</button>
+            <p>Car 2</p></div>
+        <div class="zurag">
+            <img src="image/cars3.jpg" alt="Car 3">
+            <h3>Toyota Prius</h3>
+    <p>📅 Year: 2017</p>
+    <p>🚢 Imported: 2021</p>
+    <p>🛣 Mileage: 120,000 km</p>
+    <p>💰 Price: €6000</p>
+    <a href="register.html"><button class="btn">Participate</button></a>
+            <p>Car 3</p></div>
+
+     </div>
+  </div>
+
+</body>
+</html>

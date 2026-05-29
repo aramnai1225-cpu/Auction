@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Court Seized Asset Auction Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo">  <a href="index.html" class="back-btn">← Back</a></div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="info.html">Information</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="register-section">
+
+    <h1>Register for Upcoming Auction</h1>
+
+    <p>Select the auction date and complete your registration.</p>
+
+    <!-- AUCTION INFO -->
+    <div class="auction-box">
+        <h2>Next Auction Date</h2>
+        <p><b>15 April 2026</b></p>
+        <p>Location: Online Auction Platform</p>
+    </div>
+
+    <!-- REGISTRATION FORM -->
+    <form id="registerForm" onsubmit="return validateRegister()">
+
+      <label>Full Name:</label>
+        <input type="text" id="name">
+
+        <label>Email:</label>
+        <input type="text" id="email">
+
+        <label>Phone Number:</label>
+        <input type="text" id="phone">
+
+        <label>Select Auction Type:</label>
+        <select id="type">
+            <option value="">--Select--</option>
+            <option>Vehicles</option>
+            <option>Property</option>
+            <option>Electronics</option>
+            <option>Luxury Items</option>
+        </select>
+
+        <!-- PAYMENT SECTION (SIMULATION) -->
+        <h3>Registration:</h3>
+        <button type="button" onclick="validateRegister()">Register</button>
+       
+       <h4>Registration Fee: €20</h4>
+        <button type="button" onclick="fakePayment()">Pay</button>
+
+         
+    </form>
+
+    <p id="message"></p>
+
+</section>
+
+</body>
+</html>

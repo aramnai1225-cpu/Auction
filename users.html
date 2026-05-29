@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registered Users</title>
+
+    <link rel="stylesheet"
+    href="css/style.css">
+</head>
+
+<body>
+
+<h1>Registered Users</h1>
+
+<div id="userList"></div>
+
+<script>
+
+let users =
+JSON.parse(
+localStorage.getItem("users")
+) || [];
+
+let output = "";
+
+for(let i = 0; i < users.length; i++){
+
+    output += `
+
+    <div class="card">
+
+        <h3>${users[i].name}</h3>
+
+        <p>${users[i].email}</p>
+
+        <p>${users[i].phone}</p>
+
+        <p>${users[i].type}</p>
+
+    </div>
+    `;
+}
+
+document.getElementById("userList")
+.innerHTML = output;
+
+</script>
+
+</body>
+</html>
