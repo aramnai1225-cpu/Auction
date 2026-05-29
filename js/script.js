@@ -59,7 +59,7 @@ function fakePayment(){
 
 // filter in information 
 function filterItems(){
-  var input = document.getElementById("search").value.toUpperCase();
+  var input = document.getElementById("searchInput").value.toUpperCase();
   var cards =  document.getElementsByClassName("list");
   for (var i = 0; i < cards.length; i++) {
     var text = cards[i].innerText;
