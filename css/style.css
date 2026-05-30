@@ -1,581 +1,114 @@
+/* =========================
+   GLOBAL STYLE
+========================= */
 
-/*Body */
+* {
+    box-sizing: border-box;
+}
+
 body {
-  font-family: Arial;
-  margin: 0; /*browse defualt*/
-}
-/*INDEX nav*/
-.navbar {
-  background: #1e2a38;
-  padding: 15px; 
-  display: flex;  /* all element one line*/
-  justify-content: space-between; /*Logo left side, Menu right side*/
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 15px;
-}
-
-.nav-links a {
-  color: white; 
-  text-decoration: none; /*No underline*/
-}
-/*Index page intro*/
-.Intro {
-  background: black;
-  color: white;
-  text-align: center;  /*text center*/
-  padding: 60px; 
-}
-/*Index page card section*/
-.card-container {
-  display: flex;
-  gap: 20px;
-  padding: 20px;
-}
-/*Index page card*/
-.card {
-  border: 1px solid #d86565;  /*border of card box*/
-  padding: 20px;
-  width: 30%;
-}
-/*Index page card img*/
-.card img {
-    width: 100%;      
-    height: 200px;
-    object-fit: cover; 
-}
-/*Index page Button*/
-.bnt  {
-  display: inline-block;
-  margin-top: 20px;
-  background: #00aaff;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 6px;
-  text-decoration: none;
-}
-/* Index page BUtton hover*/
-.btn:hover{
-  background: #0088cc;
-}
-/*Index page  BID BUTTON */
-.bid-btn {
-  background: #1e2a38;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-/*Index page bid button*/
-.bid-btn:hover {
-  background: #333;
-}
-
-/*Index page CARD HOVER */
-.card:hover {
-  transform: scale(1.05);
-  transition: 0.3s;
-}
-/*Index page footer*/
-footer {
-  text-align: center;
-  padding: 20px;
-}
-
-/* Contact page-Contact Form */
-.contact-form {
-    width: 25%;
-    margin: 50px auto;   /*Center*/
-    padding: 20px;
-    background-color:lightgray;
-    box-shadow: gray;
-    text-align: left;
-}
-
-/* Contact page- Label styling */
-.contact-form label {
-    display: block; /* Label takes up full width */
-    font-size: 18px;
-    margin-bottom: 8px; /* Adds space between label and input */
-}
-
-/* Input fields, textarea and button styling all will be same width */
-.contact-form input,
-.contact-form textarea,
-.contact-form button {
-    width: 100%; /* Make all fields take up the same full width */
-    padding: 10px;
-    margin-bottom: 15px; /* Space between each input field */
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 15px;  /*circular corner*/ 
-    box-sizing: border-box; /* Ensure padding doesn't affect the width */
-    margin-left: auto; /* Center horizontally */
-    margin-right: auto; /* Center horizontally */
-}
-
-/* Button styling */
-.contact-form button {
-    background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.contact-form button:hover {
-    background-color: #555;
-}
-/* Contact page Faq */
-.about, .faq {
-  background: #f5f5f5;
-  padding: 20px;
-  border-radius: 10px;
-  margin: 20px 0;
-}
-
-/*Info page*/
-.info {
-  padding: 40px;
-  max-width: 1100px;
-  margin: auto;
-}
-/* Info page Search */
-#searchInput {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 25px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-/*Info page ABOUT SECTION */
-.about {
-  background: #f5f7fa;
-  padding: 25px;
-  border-radius: 12px;
-  margin-bottom: 30px;
-}
-
-/* AUCTION CARDS */
-.auction-container {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-/*info page list*/
-.list {
-  width: 48%;
-  background: white;
-  border-radius: 12px;
-  padding: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: 0.3s;
-}
-
-.list:hover {
-  transform: scale(1.03);
-}
-
-.list img {
-  width: 90%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.list button {
-  background: #1e2a38;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 6px;
-  margin-top: 10px;
-  cursor: pointer;
-}
-
-.list button:hover {
-  background: #333;
-}
-
-/* Info page FAQ */
-.faq {
-  margin-top: 40px;
-  background: #f0f0f0;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-/* List page Back*/
-.back-btn {
-  color:white;   
-  text-decoration: none;
-  font-size: 18px;
-  background: #1e2a38;
-  padding: 6px 12px;
-  border-radius: 6px;
-  transition: 0.35s;
-}
-/*hover of back bott*/
-.back-btn:hover {
-  background: #2c3e50;;
-}
-/*List.html*/
-.List-container {
-  max-width: 1000px;
-  margin: auto;
-  padding: 40px;
-}
-
-/* List page TITLE */
-.List-container h2, .List-container h3 {
-  text-align: center;
-}
-
-/*List page GRID */
-.cars {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
-
-/*List page  CARD */
-.zurag {
-  width: 30%;
-  background: white;
-  border-radius: 10px;
-  padding: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  text-align: center;
-  transition: 0.3s;
-}
-
-.zurag:hover {
-  transform: scale(1.05);
-}
-
-/* IMAGE */
-.zurag img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-/*Register page */
-.register-section {
-  max-width: 500px;
-  margin: 50px auto;
-  background: #f9f9f9;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-/*Register page Box*/
-.auction-box {
-  background: #1e2a38;
-  color: white;
-  padding: 15px;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-/*Register page Input*/
-#registerForm input,
-#registerForm select {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-/*Register page btn*/
-#registerForm button {
-  width: 100%;
-  padding: 12px;
-  background: #1e2a38;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-#registerForm button:hover {
-  background: #1e2a38;
-}
-/*Register page massege */
-#message {
-  margin-top: 15px;
-  font-weight: bold;
-}
-/* Cart page style */
-body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #f4f6f8;
-    color: #111;
-}
-
-h1 {
-    text-align: center;
-    margin-top: 30px;
+    font-family: Arial, sans-serif;
+    background: #e8f7fb;
     color: #0d1b2a;
 }
 
-#cartItems {
-    width: 80%;
-    margin: 30px auto;
+h1, h2, h3 {
+    color: #0d1b2a;
 }
 
-.card {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 25px;
-    margin: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-}
-
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-}
-
-.card-container .card {
-    width: 30%;
+a {
+    text-decoration: none;
 }
 
 button,
+.btn,
 .bid-btn {
-    background-color: #0d1b2a;
+    background: #0d1b2a;
     color: white;
     border: none;
-    padding: 10px 18px;
-    border-radius: 6px;
+    padding: 12px 22px;
+    border-radius: 8px;
     cursor: pointer;
+    font-weight: bold;
 }
 
 button:hover,
+.btn:hover,
 .bid-btn:hover {
-    background-color: #1b263b;
+    background: #1b4965;
 }
 
-a button {
-    margin-left: 10%;
-}
-
-#paymentMessage {
-    text-align: center;
-    color: green;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-h2 {
-    text-align: center;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    .card-container {
-        flex-direction: column;
-    }
-
-    .card-container .card {
-        width: 90%;
-    }
-
-    #cartItems {
-        width: 95%;
-    }
-}
-/* Checkout Page */
-
-.checkout-form {
-    width: 400px;
-    margin: 40px auto;
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
-}
-
-.checkout-form input {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-.checkout-form button {
-    width: 100%;
-    background-color: #0d1b2a;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.checkout-form button:hover {
-    background-color: #1b263b;
-}
-
-#paymentMessage {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 22px;
-    color: green;
-    font-weight: bold;
-}
-/* ===== CART PAGE ===== */
-
-#cartItems {
-    width: 90%;
-    margin: 20px auto;
-}
-
-.card {
-    background: white;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.card h3 {
-    margin-bottom: 10px;
-}
-
-.card p {
-    font-size: 18px;
-    color: #333;
-}
-
-h1 {
-    text-align: center;
-    margin-top: 30px;
-}
-
-h2 {
-    text-align: center;
-    color: #0d1b2a;
-}
-
-button {
-    background-color: #0d1b2a;
-    color: white;
-    border: none;
-    padding: 10px 18px;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #1b263b;
-}
-
-.cart-buttons {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.empty-cart {
-    text-align: center;
-    font-size: 20px;
-    color: #666;
-}
-
-/* ===== CHECKOUT PAGE ===== */
-
-.checkout-form {
-    width: 450px;
-    margin: 40px auto;
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-}
-
-.checkout-form input {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    box-sizing: border-box;
-}
-
-.checkout-form button {
-    width: 100%;
-}
-
-#paymentMessage {
-    text-align: center;
-    font-size: 22px;
-    color: green;
-    font-weight: bold;
-    margin-top: 20px;
-}
-
-@media(max-width:768px){
-
-    .checkout-form{
-        width:90%;
-    }
-
-    .card{
-        margin:10px;
-    }
-}
-body {
-    background-color: lightblue !important;
-}
-section {
-    padding: 40px 8%;
-}
-
-.auction-section h2,
-section h2 {
-    text-align: center;
-    margin-bottom: 30px;
-}
+/* =========================
+   NAVIGATION
+========================= */
 
 .navbar {
-    background-color: #1b263b;
-    padding: 20px 40px;
-}
-
-.nav-links {
+    background: #1b263b;
+    padding: 22px 60px;
     display: flex;
-    gap: 20px;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
 }
 
-.nav-links li {
+.logo {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links {
     list-style: none;
+    display: flex;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links a {
     color: white;
-    text-decoration: none;
     font-weight: bold;
 }
+
+.nav-links a:hover {
+    color: #9bd3e6;
+}
+
+/* =========================
+   HOME PAGE
+========================= */
+
+.Intro {
+    background: linear-gradient(rgba(0,0,0,0.70), rgba(0,0,0,0.70));
+    color: white;
+    text-align: center;
+    padding: 90px 20px;
+}
+
+.Intro h1 {
+    color: white;
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.Intro p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.auction-section {
+    padding: 45px 8%;
+}
+
+.auction-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+/* =========================
+   PRODUCT CARDS
+========================= */
 
 .card-container {
     display: flex;
@@ -587,67 +120,285 @@ section h2 {
 .card {
     width: 320px;
     background: white;
-    border: none;
-    border-radius: 12px;
-    padding: 20px;
-    margin: 15px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    padding: 22px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
 }
 
 .card img {
     width: 100%;
     height: 210px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 12px;
 }
 
-button,
-.bid-btn {
-    background-color: #0d1b2a;
-    color: white;
-    border: none;
-    padding: 11px 18px;
-    border-radius: 6px;
-    cursor: pointer;
+.card h3 {
+    font-size: 22px;
+    margin-top: 18px;
 }
 
-button:hover,
-.bid-btn:hover {
-    background-color: #1b263b;
+.card p {
+    font-size: 17px;
+}
+
+/* =========================
+   CART PAGE
+========================= */
+
+.cart-page {
+    max-width: 760px;
+    margin: 55px auto;
+    padding: 20px;
+}
+
+.cart-page h1 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 35px;
+}
+
+.cart-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cart-card {
+    background: white;
+    padding: 28px;
+    border-radius: 18px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.13);
+}
+
+.cart-card h3 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.cart-card p {
+    font-size: 22px;
+}
+
+.empty-cart {
+    text-align: center;
+    font-size: 22px;
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+}
+
+.cart-summary {
+    background: white;
+    margin-top: 28px;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.13);
+    text-align: center;
+}
+
+.cart-summary h2 {
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.cart-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cart-actions button {
+    min-width: 170px;
+}
+
+/* =========================
+   CHECKOUT PAGE
+========================= */
+
+.checkout-section {
+    padding: 50px 20px;
+}
+
+.checkout-section h1 {
+    text-align: center;
+    font-size: 42px;
 }
 
 .checkout-form {
-    width: 420px;
-    margin: 40px auto;
+    width: 430px;
+    margin: 35px auto;
     background: white;
-    padding: 30px;
-    border-radius: 10px;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.13);
+}
+
+.checkout-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
 }
 
 .checkout-form input {
     width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
+    padding: 13px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.checkout-form button {
+    width: 100%;
+    margin-top: 10px;
 }
 
 #paymentMessage {
     text-align: center;
     color: green;
-    font-size: 22px;
+    font-size: 23px;
     font-weight: bold;
 }
 
-@media(max-width:768px) {
-    .card {
-        width: 90%;
+/* =========================
+   CONTACT / REGISTER BASIC FORM STYLE
+========================= */
+
+.contact-form,
+.register-section {
+    max-width: 520px;
+    margin: 50px auto;
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.13);
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button,
+#registerForm input,
+#registerForm select,
+#registerForm button {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.contact-form button,
+#registerForm button {
+    background: #0d1b2a;
+    color: white;
+}
+
+/* =========================
+   INFO / LIST PAGE
+========================= */
+
+.info,
+.List-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 45px 20px;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 30px;
+}
+
+.about,
+.faq,
+.list {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.10);
+    margin-bottom: 25px;
+}
+
+.auction-container,
+.cars {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.list,
+.zurag {
+    width: 48%;
+}
+
+.list img,
+.zurag img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer,
+footer {
+    background: #1b263b;
+    color: white;
+    text-align: center;
+    padding: 22px;
+    margin-top: 50px;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
     }
 
     .nav-links {
         flex-wrap: wrap;
         justify-content: center;
+        gap: 15px;
+    }
+
+    .Intro h1,
+    .cart-page h1,
+    .checkout-section h1 {
+        font-size: 32px;
+    }
+
+    .card,
+    .list,
+    .zurag {
+        width: 90%;
     }
 
     .checkout-form {
         width: 90%;
+    }
+
+    .cart-actions {
+        flex-direction: column;
+    }
+
+    .cart-actions button {
+        width: 100%;
     }
 }

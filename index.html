@@ -1,90 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="widht=device-width, initial-scale=1.0">
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Court Seized Asset Auction Platform</title>
 
+    <!-- External CSS file -->
     <link rel="stylesheet" href="css/style.css">
-    <script  src="js/script.js" defer></script>
-    </head>
+
+    <!-- JavaScript file -->
+    <script src="js/script.js" defer></script>
+</head>
 
 <body>
+
+    <!-- Navigation menu -->
     <nav class="navbar">
-    <div class="logo">    
-        </div>
+        <div class="logo">Auction</div>
 
         <ul class="nav-links">
-            <!-- Home page -->
-            
-    <li><a href="index.html">Home</a></li>
-    <li><a href="info.html">Information</a></li>
-    <li><a href="register.html">Registration</a></li>
-    <li><a href="contact.html">Contact Us</a></li>
-    <li><a href="card.html">Cart</a></li>
-    <li><a href="checkout.html">Checkout</a></li>
-</ul>
-        
+            <li><a href="index.html">Home</a></li>
+            <li><a href="info.html">Information</a></li>
+            <li><a href="register.html">Registration</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="card.html">Cart</a></li>
+            <li><a href="checkout.html">Checkout</a></li>
+        </ul>
     </nav>
-<header
-     class="Intro">
+
+    <!-- Hero / introduction section -->
+    <header class="Intro">
         <h1>Welcome to Court Seized Asset Auction</h1>
         <p>Buy and sell items through secure online auctions.</p>
-
-        <!-- Call to action button -->
         <a href="info.html" class="btn">View Auctions</a>
-</header>
-    
- <section id="auctions" class="auction-section">
+    </header>
 
-        <h2>Featured Auction Items</h2>
+    <!-- Database products section -->
+    <section class="auction-section">
         <h2>Products from Database</h2>
-<div id="products" class="card-container"></div>
 
-        <!-- Cards container -->
+        <!-- Products from MySQL database will be displayed here by JavaScript -->
+        <div id="products" class="card-container"></div>
+    </section>
+
+    <!-- Static products section -->
+    <section class="auction-section">
+        <h2>Featured Auction Items</h2>
+
         <div class="card-container">
 
-            <!-- CARD 1 -->
-           <div class="card">
-    <img src="image/watch.jpg" alt="Watch">
-    <h3>Watch</h3>
-    <p>Starting bid: €500</p>
-    <button class="bid-btn" onclick="addToCart('Watch', 500)">
-        Add to Cart
-    </button>
-</div>
+            <!-- Static product card 1 -->
+            <div class="card">
+                <img src="image/watch.jpg" alt="Watch">
+                <h3>Watch</h3>
+                <p>Starting bid: €500</p>
+                <button class="bid-btn" onclick="addToCart('Watch', 500)">
+                    Add to Cart
+                </button>
+            </div>
 
-<div class="card">
-    <img src="image/car.jpg" alt="Car">
-    <h3>Car</h3>
-    <p>Starting bid: €20,000</p>
-    <button class="bid-btn" onclick="addToCart('Car', 20000)">
-        Add to Cart
-    </button>
-</div>
+            <!-- Static product card 2 -->
+            <div class="card">
+                <img src="image/car.jpg" alt="Car">
+                <h3>Car</h3>
+                <p>Starting bid: €20,000</p>
+                <button class="bid-btn" onclick="addToCart('Car', 20000)">
+                    Add to Cart
+                </button>
+            </div>
 
-<div class="card">
-    <img src="image/property.jpg" alt="Property">
-    <h3>Property</h3>
-    <p>Starting bid: €1,000</p>
-    <button class="bid-btn" onclick="addToCart('Property', 1000)">
-        Add to Cart
-    </button>
-</div>
-            
+            <!-- Static product card 3 -->
+            <div class="card">
+                <img src="image/property.jpg" alt="Property">
+                <h3>Property</h3>
+                <p>Starting bid: €1,000</p>
+                <button class="bid-btn" onclick="addToCart('Property', 1000)">
+                    Add to Cart
+                </button>
+            </div>
 
         </div>
-        <section>
-
-</section>
     </section>
-    
 
-    <!-- ================= FOOTER ================= -->
+    <!-- Footer -->
     <footer class="footer">
         <p>&copy; 2026 Online Court Seized Asset Auction Platform. All rights reserved.</p>
     </footer>
-   
+
 </body>
 </html>

@@ -4,39 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout</title>
+
+    <!-- External CSS file -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-<ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="info.html">Information</a></li>
-    <li><a href="register.html">Registration</a></li>
-    <li><a href="contact.html">Contact Us</a></li>
-    <li><a href="card.html">Cart</a></li>
-    <li><a href="checkout.html">Checkout</a></li>
-</ul>
-    <h1>Checkout</h1>
 
-    <form onsubmit="completeCheckout(); return false;" class="checkout-form">
-        <input type="text" id="fullName" placeholder="Full Name" required>
-        <input type="email" id="email" placeholder="Email Address" required>
-        <input type="text" id="address" placeholder="Delivery Address" required>
-        <input type="text" id="cardNumber" placeholder="Card Number" required>
+    <!-- Navigation menu -->
+    <nav class="navbar">
+        <div class="logo">Auction</div>
 
-        <button type="submit">Place Order</button>
-    </form>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="info.html">Information</a></li>
+            <li><a href="register.html">Registration</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="card.html">Cart</a></li>
+            <li><a href="checkout.html">Checkout</a></li>
+        </ul>
+    </nav>
 
-    <p id="paymentMessage"></p>
+    <!-- Checkout section -->
+    <section class="checkout-section">
+        <h1>Checkout</h1>
 
-    <script>
-        function completeCheckout() {
-            localStorage.removeItem("cart");
+        <!-- Checkout form -->
+        <form onsubmit="completeCheckout(); return false;" class="checkout-form">
 
-            document.getElementById("paymentMessage").innerHTML =
-            "✅ Payment Successful! Thank you for your purchase.";
+            <label>Full Name</label>
+            <input type="text" id="fullName" placeholder="Enter your full name" required>
+
+            <label>Email Address</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label>Delivery Address</label>
+            <input type="text" id="address" placeholder="Enter your address" required>
+
+            <label>Card Number</label>
+            <input type="text" id="cardNumber" placeholder="Enter card number" required>
+
+            <button type="submit">Place Order</button>
+        </form>
+
+        <!-- Payment success message -->
+        <p id="paymentMessage"></p>
+    </section>
+
+   <script>
+    // Complete checkout process with validation
+    function completeCheckout() {
+
+        let fullName = document.getElementById("fullName").value;
+        let email = document.getElementById("email").value;
+        let address = document.getElementById("address").value;
+        let cardNumber = document.getElementById("cardNumber").value;
+
+        // Name must contain only letters and spaces
+        let namePattern = /^[A-Za-z\s]+$/;
+
+        if (!namePattern.test(fullName)) {
+            alert("Full name must contain only letters.");
+            return false;
         }
-    </script>
+
+        // Email format validation
+        let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!emailPattern.test(email)) {
+            alert("Please enter a valid email address.");
+            return false;
+        }
+
+        // Address cannot be empty
+        if (address === "") {
+            alert("Please enter your delivery address.");
+            return false;
+        }
+
+        // Card number must be 16 digits
+        let cardPattern = /^\d{16}$/;
+
+        if (!cardPattern.test(cardNumber)) {
+            alert("Card number must be 16 digits.");
+            return false;
+        }
+
+        // Clear cart after successful checkout
+        localStorage.removeItem("cart");
+
+        // Show success message
+        document.getElementById("paymentMessage").innerHTML =
+            "✅ Payment Successful! Thank you for your purchase.";
+
+        return true;
+    }
+</script>
 
 </body>
 </html>

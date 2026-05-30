@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart</title>
 
+    <!-- External CSS file -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <!-- Navigation -->
+    <!-- Navigation menu -->
     <nav class="navbar">
+        <div class="logo">Auction</div>
+
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="info.html">Information</a></li>
@@ -23,78 +25,67 @@
         </ul>
     </nav>
 
-    <h1>Shopping Cart</h1>
+    <!-- Cart page section -->
+    <section class="cart-page">
 
-    <div id="cartItems"></div>
+        <h1>Shopping Cart</h1>
 
-    <div class="cart-actions">
+        <!-- Cart items will be displayed here -->
+        <div id="cartItems" class="cart-list"></div>
 
-        <a href="index.html">
-            <button>Continue Shopping</button>
-        </a>
+        <!-- Cart summary box -->
+        <div class="cart-summary">
+            <h2 id="cartTotal"></h2>
 
-        <a href="checkout.html">
-            <button>Checkout</button>
-        </a>
+            <div class="cart-actions">
+                <a href="index.html">
+                    <button>Continue Shopping</button>
+                </a>
 
-    </div>
+                <a href="checkout.html">
+                    <button>Checkout</button>
+                </a>
+            </div>
+        </div>
+
+    </section>
 
     <script>
-
+        // Get cart data from browser localStorage
         let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
         let output = "";
-
         let total = 0;
 
+        // Loop through cart items and display them
         for (let i = 0; i < cart.length; i++) {
-
             total += Number(cart[i].price);
 
             output += `
-                <div class="card">
-
+                <div class="cart-card">
                     <h3>${cart[i].name}</h3>
-
                     <p>€${cart[i].price}</p>
-
-                    <button onclick="removeItem(${i})">
-                        Remove
-                    </button>
-
+                    <button onclick="removeItem(${i})">Remove</button>
                 </div>
             `;
         }
 
+        // Show message if cart is empty
         if (cart.length === 0) {
-
-            output = `
-                <p style="text-align:center; font-size:20px;">
-                    Your cart is empty.
-                </p>
-            `;
+            output = `<p class="empty-cart">Your cart is empty.</p>`;
         }
 
-        output += `
-            <h2>Total: €${total}</h2>
-        `;
-
+        // Display cart items and total price
         document.getElementById("cartItems").innerHTML = output;
+        document.getElementById("cartTotal").innerHTML = "Total: €" + total;
 
+        // Remove selected item from cart
         function removeItem(index) {
-
             cart.splice(index, 1);
-
-            localStorage.setItem(
-                "cart",
-                JSON.stringify(cart)
-            );
-
+            localStorage.setItem("cart", JSON.stringify(cart));
             location.reload();
         }
-
     </script>
 
 </body>
-
 </html>
