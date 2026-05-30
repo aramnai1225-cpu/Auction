@@ -17,11 +17,15 @@
 
         <ul class="nav-links">
             <!-- Home page -->
-            <li><a href="index.html">Home</a></li>
-            <li><a href="info.html">Information</a></li>
-            <li><a href="register.html">Registration</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-        </ul>
+            
+    <li><a href="index.html">Home</a></li>
+    <li><a href="info.html">Information</a></li>
+    <li><a href="register.html">Registration</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+    <li><a href="card.html">Cart</a></li>
+    <li><a href="checkout.html">Checkout</a></li>
+</ul>
+        
     </nav>
 <header
      class="Intro">
@@ -42,37 +46,33 @@
         <div class="card-container">
 
             <!-- CARD 1 -->
-            <div class="card">
-                <img src="image/watch.jpg" alt="Watch">
+           <div class="card">
+    <img src="image/watch.jpg" alt="Watch">
+    <h3>Watch</h3>
+    <p>Starting bid: €500</p>
+    <button class="bid-btn" onclick="addToCart('Watch', 500)">
+        Add to Cart
+    </button>
+</div>
 
-                <h3>Watch</h3>
-                <p>Starting bid: €500</p>
-                <a href="register.html">
-                <button class="bid-btn">Bid Now</button>
-                </a>
-            </div>
+<div class="card">
+    <img src="image/car.jpg" alt="Car">
+    <h3>Car</h3>
+    <p>Starting bid: €20,000</p>
+    <button class="bid-btn" onclick="addToCart('Car', 20000)">
+        Add to Cart
+    </button>
+</div>
 
-            <!-- CARD 2 -->
-            <div class="card">
-                <img src="image/car.jpg" alt="Car">
-
-                <h3>Car</h3>
-                <p>Starting bid: €20,000</p>
-               <a href="register.html">
-                <button class="bid-btn">Bid Now</button>
-                </a>
-            </div>
-
-            <!-- CARD 3 -->
-            <div class="card">
-                <img src="image/property.jpg" alt="Property">
-
-                <h3>Property</h3>
-                <p>Starting bid: €1,000</p>
-                <a href="register.html">
-                <button class="bid-btn">Bid Now</button>
-                </a>
-            </div>
+<div class="card">
+    <img src="image/property.jpg" alt="Property">
+    <h3>Property</h3>
+    <p>Starting bid: €1,000</p>
+    <button class="bid-btn" onclick="addToCart('Property', 1000)">
+        Add to Cart
+    </button>
+</div>
+            
 
         </div>
         <section>

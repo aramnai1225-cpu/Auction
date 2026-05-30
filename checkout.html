@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="info.html">Information</a></li>
+    <li><a href="register.html">Registration</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+    <li><a href="card.html">Cart</a></li>
+    <li><a href="checkout.html">Checkout</a></li>
+</ul>
+    <h1>Checkout</h1>
+
+    <form onsubmit="completeCheckout(); return false;" class="checkout-form">
+        <input type="text" id="fullName" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email Address" required>
+        <input type="text" id="address" placeholder="Delivery Address" required>
+        <input type="text" id="cardNumber" placeholder="Card Number" required>
+
+        <button type="submit">Place Order</button>
+    </form>
+
+    <p id="paymentMessage"></p>
+
+    <script>
+        function completeCheckout() {
+            localStorage.removeItem("cart");
+
+            document.getElementById("paymentMessage").innerHTML =
+            "✅ Payment Successful! Thank you for your purchase.";
+        }
+    </script>
+
+</body>
+</html>

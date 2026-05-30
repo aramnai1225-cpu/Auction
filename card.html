@@ -11,21 +11,33 @@
 
 <body>
 
+    <!-- Navigation -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="info.html">Information</a></li>
+            <li><a href="register.html">Registration</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="card.html">Cart</a></li>
+            <li><a href="checkout.html">Checkout</a></li>
+        </ul>
+    </nav>
+
     <h1>Shopping Cart</h1>
 
     <div id="cartItems"></div>
 
-    <br>
+    <div class="cart-actions">
 
-    <a href="index.html">
-        <button>Continue Shopping</button>
-    </a>
+        <a href="index.html">
+            <button>Continue Shopping</button>
+        </a>
 
-    <button onclick="fakePayment()">
-        Checkout
-    </button>
+        <a href="checkout.html">
+            <button>Checkout</button>
+        </a>
 
-    <p id="paymentMessage"></p>
+    </div>
 
     <script>
 
@@ -40,29 +52,31 @@
             total += Number(cart[i].price);
 
             output += `
-            <div class="card">
+                <div class="card">
 
-                <h3>${cart[i].name}</h3>
+                    <h3>${cart[i].name}</h3>
 
-                <p>€${cart[i].price}</p>
+                    <p>€${cart[i].price}</p>
 
-                <button onclick="removeItem(${i})">
-                    Remove
-                </button>
+                    <button onclick="removeItem(${i})">
+                        Remove
+                    </button>
 
-            </div>
+                </div>
             `;
         }
 
         if (cart.length === 0) {
 
             output = `
-            <p>Your cart is empty.</p>
+                <p style="text-align:center; font-size:20px;">
+                    Your cart is empty.
+                </p>
             `;
         }
 
         output += `
-        <h2>Total: €${total}</h2>
+            <h2>Total: €${total}</h2>
         `;
 
         document.getElementById("cartItems").innerHTML = output;
@@ -77,16 +91,6 @@
             );
 
             location.reload();
-        }
-
-        function fakePayment() {
-
-            document.getElementById(
-                "paymentMessage"
-            ).innerHTML =
-                "✅ Payment Successful! Thank you for your purchase.";
-
-            localStorage.removeItem("cart");
         }
 
     </script>

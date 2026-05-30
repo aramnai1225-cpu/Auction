@@ -1,57 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
-<title>Dashboard</title>
-
-<link rel="stylesheet"
-href="css/style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+<ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="info.html">Information</a></li>
+    <li><a href="register.html">Registration</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+    <li><a href="card.html">Cart</a></li>
+    <li><a href="checkout.html">Checkout</a></li>
+</ul>
+    <h1>User Dashboard</h1>
 
-<h1>User Dashboard</h1>
+    <div id="userInfo"></div>
 
-<h2>Registered Auctions</h2>
+    <h2>My Cart Items</h2>
+    <div id="dashboardCart"></div>
 
-<div id="auctionList"></div>
+    <br>
 
-<script>
+    <a href="index.html">
+        <button>Home</button>
+    </a>
 
-let auctions =
-JSON.parse(
-localStorage.getItem(
-"registeredAuctions")
-) || [];
+    <a href="card.html">
+        <button>View Cart</button>
+    </a>
 
-let output = "";
+    <script>
+        let user = JSON.parse(localStorage.getItem("loggedUser"));
 
-for(let i=0; i<auctions.length; i++){
+        if (user) {
+            document.getElementById("userInfo").innerHTML = `
+                <div class="card">
+                    <h3>Welcome, ${user.name}</h3>
+                    <p>Email: ${user.email}</p>
+                    <p>Phone: ${user.phone}</p>
+                    <p>User Type: ${user.type}</p>
+                </div>
+            `;
+        } else {
+            document.getElementById("userInfo").innerHTML = `
+                <p>No user is logged in.</p>
+            `;
+        }
 
-    output += `
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        let output = "";
 
-    <div class="card">
+        for (let i = 0; i < cart.length; i++) {
+            output += `
+                <div class="card">
+                    <h3>${cart[i].name}</h3>
+                    <p>€${cart[i].price}</p>
+                </div>
+            `;
+        }
 
-    <h3>${auctions[i].item}</h3>
+        if (cart.length === 0) {
+            output = "<p>No items in cart.</p>";
+        }
 
-    <p>Date:
-    ${auctions[i].date}</p>
-
-    <p>
-    Registration Number:
-    ${auctions[i].regNumber}
-    </p>
-
-    </div>
-    `;
-}
-
-document.getElementById(
-"auctionList"
-).innerHTML = output;
-
-</script>
+        document.getElementById("dashboardCart").innerHTML = output;
+    </script>
 
 </body>
 </html>
